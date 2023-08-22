@@ -8,7 +8,9 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 
 public class TestBase {
@@ -46,14 +48,13 @@ public class TestBase {
 		driver.get(properties.getProperty("url"));
 	}
 	
-	@BeforeTest
+	@BeforeClass
 	public void setUp() {
 		initialise();
 	}
 	
-	@AfterTest
-	  public void close() {
-		  driver.close();
-	  }
+	/*
+	 * @AfterClass public void close() { driver.close(); }
+	 */
 	
 }
