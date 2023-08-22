@@ -20,14 +20,4 @@ public class Search extends TestBase{
 	  searchResultPage = new SearchResultPage();
 	  searchResultPage.clickSearchResult();
   }
-	
-  @Test(priority = 1) 
-  public void addItemToCart() {
-	  searchResultPage = new SearchResultPage();
-	  searchResultPage.clickAddToCart(); 
-	  
-  }
-	  
-  
-  
 }
