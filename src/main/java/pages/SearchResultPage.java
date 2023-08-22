@@ -14,8 +14,15 @@ public class SearchResultPage extends TestBase{
 	@FindBy(id = "button-search")
 	WebElement searchButton;
 	
+	@FindBy(xpath = "//button[contains(text(),'Add to cart')]")
+	WebElement addToCartButton;
+	
 	public void clickSearchResult() {
 		searchResult.click();
+	}
+
+	public void clickAddToCart() {
+		addToCartButton.click();
 	}
 	
 	public SearchResultPage() {

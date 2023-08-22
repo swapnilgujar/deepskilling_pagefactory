@@ -13,18 +13,20 @@ public class Search extends TestBase{
 	SearchResultPage searchResultPage;
 	
 	
-  @Test
+  @Test(priority = 0) 
   public void searchItem() {
 	  homePage = new HomePage();
 	  homePage.searchItems("Parry Hotter");
 	  searchResultPage = new SearchResultPage();
 	  searchResultPage.clickSearchResult();
-	  
   }
-  
-	/*
-	 * @Test public void addItemToCart() { }
-	 */
+	
+  @Test(priority = 1) 
+  public void addItemToCart() {
+	  searchResultPage = new SearchResultPage();
+	  searchResultPage.clickAddToCart();  
+  }
+	  
   
   
 }
