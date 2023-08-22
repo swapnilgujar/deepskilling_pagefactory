@@ -1,7 +1,5 @@
 package testscripts;
 
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import base.TestBase;
@@ -11,12 +9,6 @@ import pages.HomePage;
 public class Search extends TestBase{
 	
 	HomePage homePage;
-	
-	@BeforeTest
-	public void setUp() {
-		initialise();
-	}
-	
 	
   @Test
   public void searchItem() {
@@ -28,8 +20,5 @@ public class Search extends TestBase{
   public void addItemToCart() {
   }
   
-  @AfterTest
-  public void close() {
-	  driver.close();
-  }
+  
 }

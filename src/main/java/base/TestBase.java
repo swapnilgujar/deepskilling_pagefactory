@@ -8,6 +8,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 public class TestBase {
 	
@@ -43,4 +45,15 @@ public class TestBase {
 		driver.manage().deleteAllCookies();
 		driver.get(properties.getProperty("url"));
 	}
+	
+	@BeforeTest
+	public void setUp() {
+		initialise();
+	}
+	
+	@AfterTest
+	  public void close() {
+		  driver.close();
+	  }
+	
 }
