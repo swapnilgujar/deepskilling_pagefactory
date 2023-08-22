@@ -24,7 +24,8 @@ public class Search extends TestBase{
   @Test(priority = 1) 
   public void addItemToCart() {
 	  searchResultPage = new SearchResultPage();
-	  searchResultPage.clickAddToCart();  
+	  searchResultPage.clickAddToCart(); 
+	  
   }
 	  
   
