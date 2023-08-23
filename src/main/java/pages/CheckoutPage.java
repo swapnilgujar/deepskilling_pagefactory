@@ -21,13 +21,11 @@ public class CheckoutPage extends TestBase {
 	WebElement addressTextBox;
 	
 	
-	
-	   public void fillForm(String name,String surname, String address) { 
-		   nameTexBox.sendKeys(name); 
-		   surNameTexBox.sendKeys(surname); 
-		   addressTextBox.sendKeys(address); 
-		   
-		}
+	 public void fillForm(String name,String surname, String address) { 
+	   nameTexBox.sendKeys(name); 
+	   surNameTexBox.sendKeys(surname); 
+	   addressTextBox.sendKeys(address); 
+	}
 	 	
 	public CheckoutPage() {
 		PageFactory.initElements(driver, this);
